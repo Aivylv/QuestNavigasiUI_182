@@ -39,4 +39,26 @@ fun TampilData (
                 .padding(innerPadding)
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
-        )
+        ) {
+            items.forEach { item ->
+                Column {
+                    Text(
+                        text = item.first.uppercase(),
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Medium
+                    )
+
+                    Text(
+                        text = item.second,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Cursive,
+                        fontSize = 22.sp
+                    )
+
+                    HorizontalDivider(
+                        thickness = 1.dp,
+                        color = Color.Cyan,
+                        modifier = Modifier.padding(vertical = 8.dp)
+                    )
+                }
+            }
