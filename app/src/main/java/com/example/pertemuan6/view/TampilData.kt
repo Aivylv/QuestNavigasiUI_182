@@ -33,4 +33,10 @@ fun TampilData (
                 )
             )
         }
-    )
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        )
